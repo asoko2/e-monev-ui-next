@@ -3,9 +3,9 @@ import AOS from 'aos'
 import { useEffect } from 'react'
 import Head from 'next/head'
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { SessionProvider } from 'next-auth/react'
 
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   useEffect(() => {
     AOS.init()
   })
@@ -19,9 +19,11 @@ function MyApp({ Component, pageProps }) {
           href="https://unpkg.com/aos@2.3.1/dist/aos.css"
           rel="stylesheet"
         />
-        <link rel='icon' href='/logo-e-monev.png'/>
+        <link rel='icon' href='/logo-e-monev.png' />
       </Head>
-      <Component {...pageProps}/>
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </>
   )
 }

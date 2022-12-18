@@ -7,7 +7,7 @@ export default function Dashboard() {
             <Head>
                 <title>Dashboard | E-Monev</title>
             </Head>
-            <div className="w-full bg-white shadow-md p-4 mb-4">
+            <div className="w-full bg-white shadow-md p-4 mb-4 rounded-lg">
                 <h3 className="font-bold text-xl">Selamat datang di E-Monev</h3>
             </div>
         </>

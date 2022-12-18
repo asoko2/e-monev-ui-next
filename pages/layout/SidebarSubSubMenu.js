@@ -12,7 +12,7 @@ function SidebarSubSubMenu({ route, router }) {
   return (
     <>
       <a onClick={handleDropdownMenuClick}>
-        <li className="inline-flex items-center text-sm px-[11px] hover:px-2 2xl:py-4 py-3 hover:border-l-[3px] hover:border-white hover:font-semibold text-primary text-opacity-70 hover:text-primary transform transition duration-[125ms] cursor-pointer w-full hover:bg-primary-darker hover:bg-opacity-10">
+        <li className="inline-flex items-center text-sm px-[11px] hover:px-2 2xl:py-4 py-3 hover:border-l-[3px] hover:border-primary hover:font-semibold text-primary text-opacity-70 hover:text-primary transform transition duration-[125ms] cursor-pointer w-full hover:bg-primary-darker hover:bg-opacity-10">
           <span className="flex-shrink-0 w-1/12">
             <i className={route.icon}></i>
           </span>
@@ -53,9 +53,9 @@ function SidebarSubSubMenu({ route, router }) {
               <li
                 className={
                   (router.pathname == r.path
-                    ? "border-l-[3px] border-white px-[45px] text-primary text-opacity-100 font-semibold "
+                    ? "border-l-[3px] border-primary px-[45px] text-primary text-opacity-100 font-semibold "
                     : "text-primary text-opacity-70 px-12 ") +
-                  "inline-flex items-center my-1 text-sm py-3 2xl:py-4 hover:px-[45px] hover:border-l-[3px]  hover:border-white text-primary hover:bg-primary-darker hover:bg-opacity-10 hover:text-opacity-100 hover:font-semibold transform transition duration-150 cursor-pointer w-full"
+                  "inline-flex items-center my-1 text-sm py-3 2xl:py-4 hover:px-[45px] hover:border-l-[3px]  hover:border-primary text-primary hover:bg-primary-darker hover:bg-opacity-10 hover:text-opacity-100 hover:font-semibold transform transition duration-150 cursor-pointer w-full"
                 }
               >
                 <div className="flex-auto">{r.name}</div>
