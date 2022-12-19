@@ -1,7 +1,9 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 import Wrapper from "./layout/wrapper"
 
 export default function Dashboard() {
+    const router = useRouter()
     return (
         <>
             <Head>
